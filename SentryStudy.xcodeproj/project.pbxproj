@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		026C400887FAFF5181660E85 /* Pods_SentryStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6033797D2629F16E97E212BC /* Pods_SentryStudy.framework */; };
 		D266906C242301F100EC2880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266906B242301F100EC2880 /* AppDelegate.swift */; };
 		D266906E242301F100EC2880 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266906D242301F100EC2880 /* SceneDelegate.swift */; };
 		D2669070242301F100EC2880 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266906F242301F100EC2880 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		418023ABF07D1F513671B671 /* Pods-SentryStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentryStudy.release.xcconfig"; path = "Target Support Files/Pods-SentryStudy/Pods-SentryStudy.release.xcconfig"; sourceTree = "<group>"; };
+		6033797D2629F16E97E212BC /* Pods_SentryStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SentryStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A98CE8E31DCEE9F911B97F57 /* Pods-SentryStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentryStudy.debug.xcconfig"; path = "Target Support Files/Pods-SentryStudy/Pods-SentryStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		D2669068242301F100EC2880 /* SentryStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SentryStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D266906B242301F100EC2880 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D266906D242301F100EC2880 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				026C400887FAFF5181660E85 /* Pods_SentryStudy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15639A03A7F1F698BA03615A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6033797D2629F16E97E212BC /* Pods_SentryStudy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2F9FC4C62C2370565BB74640 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A98CE8E31DCEE9F911B97F57 /* Pods-SentryStudy.debug.xcconfig */,
+				418023ABF07D1F513671B671 /* Pods-SentryStudy.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D266905F242301F100EC2880 = {
 			isa = PBXGroup;
 			children = (
 				D266906A242301F100EC2880 /* SentryStudy */,
 				D2669069242301F100EC2880 /* Products */,
+				2F9FC4C62C2370565BB74640 /* Pods */,
+				15639A03A7F1F698BA03615A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D266907C242301F300EC2880 /* Build configuration list for PBXNativeTarget "SentryStudy" */;
 			buildPhases = (
+				AA07F3D6B649B9279E16AFC7 /* [CP] Check Pods Manifest.lock */,
 				D2669064242301F100EC2880 /* Sources */,
 				D2669065242301F100EC2880 /* Frameworks */,
 				D2669066242301F100EC2880 /* Resources */,
+				24D5FD1E26D26D061D66A066 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +167,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24D5FD1E26D26D061D66A066 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SentryStudy/Pods-SentryStudy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SentryStudy/Pods-SentryStudy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SentryStudy/Pods-SentryStudy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA07F3D6B649B9279E16AFC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SentryStudy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D2669064242301F100EC2880 /* Sources */ = {
@@ -290,6 +359,7 @@
 		};
 		D266907D242301F300EC2880 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A98CE8E31DCEE9F911B97F57 /* Pods-SentryStudy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,6 +378,7 @@
 		};
 		D266907E242301F300EC2880 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 418023ABF07D1F513671B671 /* Pods-SentryStudy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
