@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Sentry
 
 class ViewController: UIViewController {
 
@@ -15,9 +16,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func ErrorButton(_ sender: UIButton) {
-        
+    @IBAction func errorSend(_ sender: UIButton) {
+        Client.shared?.crash()
     }
-    
 }
 

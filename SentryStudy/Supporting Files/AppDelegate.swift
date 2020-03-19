@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Sentry
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        do {
+            Client.shared = try Client(dsn: "https://dc2a532fb78e45f6ac9c333f9b8f7bc5@sentry.io/5166697")
+            try Client.shared?.startCrashHandler()
+        } catch let error {
+            print("\(error)")
+        }
         return true
     }
 
